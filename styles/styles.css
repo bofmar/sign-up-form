@@ -1,8 +1,13 @@
 :root{
   --black: #101011;
+  --green: #596D48;
+  --border-color: #E5E7EB;
+  --form-text-color: rgb(38, 49, 66);
   
   --logo-text: 9vh;
   --footnote-text: 0.9rem;
+  --label-text: 0.9rem;
+  --big-text: 1.25rem;
 }
 
 @font-face {
@@ -15,6 +20,10 @@ body{
   display: flex;
   justify-content: center;
 }
+
+/* * * * * * 
+    ASIDE
+* * * * * * */
 
 aside{
   background-image: url(../images/leaf.png);
@@ -33,7 +42,7 @@ aside{
   align-items: center;
   justify-content: center;
   margin-top: 25vh;
-  width: 25vw;
+  width: 100%;
   height: 15vh;
 }
 
@@ -58,8 +67,84 @@ aside a:visited, aside a:link{
   color: aliceblue;
 }
 
+/* * * * * * 
+    MAIN
+* * * * * * */
+
 main{
   background-color: white;
   height: 100vh;
   width: 45vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: sans-serif;
+}
+
+main > *{
+  border: 1px solid black;
+}
+
+em{
+  font-style: italic;
+}
+
+.call-to-action{
+  font-size: var(--big-text);
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.call-to-action > *{
+  width: 90%;
+  line-height: 1.5rem;
+}
+
+.call-to-action p:last-child{
+  padding: 1rem;
+}
+
+form{
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--form-text-color);
+  border: 1px solid #E5E7EB;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+form > *{
+  width: 90%;
+  margin: auto;
+  margin: 1.25rem 0 1.25rem 2.5rem;
+}
+
+legend{
+  font-size: var(--big-text);
+  font-weight: bold;
+}
+
+form div{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 30%;
+  font-size: var(--label-text);
+}
+
+input{
+  border: 1px solid #E5E7EB;
+  font-size: 1rem;
+  padding: 5px 5px 5px 10px;
+  border-radius: 5px;
+}
+
+input:focus{
+  outline: none;
+  border: 1px solid rgb(49, 0, 128);
+}
+
+input:invalid{
+  border: 1px solid red;
 }
