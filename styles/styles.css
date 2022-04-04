@@ -77,12 +77,8 @@ main{
   width: 45vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   font-family: sans-serif;
-}
-
-main > *{
-  border: 1px solid black;
 }
 
 em{
@@ -95,6 +91,7 @@ em{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 .call-to-action > *{
@@ -105,6 +102,10 @@ em{
 .call-to-action p:last-child{
   padding: 1rem;
 }
+
+/* * * * * * 
+    FORM
+* * * * * * */
 
 form{
   display: flex;
@@ -147,4 +148,35 @@ input:focus{
 
 input:invalid{
   border: 1px solid red;
+}
+
+/* * * * * * 
+    LOWER
+* * * * * * */
+
+button{
+  all: initial;
+  color: aliceblue;
+  background-color: var(--green);
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 15px 40px;
+  border-radius: 5px;
+  margin: 1.25rem 0 1.25rem 2.5rem;
+}
+
+button:hover{
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.5);
+}
+
+.foot p{
+  margin: 0 0 1.25rem 2.5rem;
+  font-weight: 600;
+}
+
+.foot a{
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--green);
 }
