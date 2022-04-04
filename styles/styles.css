@@ -1,0 +1,19 @@
+:root{
+  --black: #101011;
+}
+
+body{
+  background-color: var(--black, black);
+  display: flex;
+  justify-content: center;
+}
+aside{
+  background-color: red;
+  height: 100vh;
+  width: 25vw;
+}
+main{
+  background-color: white;
+  height: 100vh;
+  width: 45vw;
+}
